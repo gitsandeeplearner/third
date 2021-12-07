@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Sandeep">
+	<meta name="keywords" content="div table">
+<script>
+	function chak(){
+		document.getElementById("demo").style.color="red";
+		document.getElementById("demo").style.padding="30px";
+		document.getElementById("demo").style.backgroundColor="green";
+	}
+	function writetext(){
+		document.getElementById("changetext").innerHTML = "Text is replaced";
+	}
+	console.log("I am here");
+</script>
+<style>
+	h1.c1{
+		color:yellow; /* Here c1 class is particular for h1 tag */
+	}
+	.c1{
+		color: hotpink;
+	}
+	.t1{
+		border:1px solid black;
+	}
+	#first{
+		border: 1px solid red;
+		width: 400px;
+
+	}
+	#second{
+		border: 1px solid green;
+		
+	}
+	#third{
+		border: 1px solid blue;
+		width: 150px;
+
+	}
+	.commondiv{
+		float: left;
+		margin: 10px 50px 0 0;
+		padding: 5px 5px;
+	}
+	.sp{
+		border: 2px solid green;
+		margin: 10px 0 0 0;
+		padding: 30px 30px;
+		display: block;
+		width: 200px;
+		float: left;
+		
+
+	}
+	.spdi1{
+		border: 1px solid red;
+		clear: both;
+		display: inline-block;
+	}
+	.spdi2{
+		border: 1px solid green;
+		/*clear: both;*/
+		display: inline-block;
+		padding: 30px;
+	}
+	#loremcol{
+		margin-top:15px ;
+		text-align: justify;
+		column-width:350px;
+		column-gap: 30px;
+		/*column-rule: width style color;*/
+		column-rule: 2px solid red;
+		user-select: none;
+	}
+</style>
+</head>
+<body>
+	<div style="background-color:black; color:white; padding:10px;">
+		Here we are !
+		<h2>Best of <span style="color:red;">luck</span></h2>
+	</div>
+
+	<p id="demo">This is only for the practise</p>
+
+	<p id="changetext">Text will change on click</p>
+
+	<h1 class="c1"> Line</h1>
+	<p class="c1 t1">We are working on the class element and we will finish it today</p>
+	<div>
+		<button onclick="chak()">Click me</button>
+		<button onclick="writetext()">For Inner HTML</button>
+	</div>
+
+	<!-- To allign all the div's horizontally, we need to give float left/right property to all the div's.
+		 Width is not important while applying the float property. 
+		 If width is given then, then the div will show according to the width, but the horizintal space still will be there. 
+		 Even after giving the width property the "div" will take full horizontal space. So, float property will free up the space and will make the second div to come horizontal to the first div.
+
+		Now suppose if there are three div's and we give float property to two div's, then the third div will automatically comes horizintally up OR If the data in the both the div's is more than the min-height of two div's then the data will overflow on the third div to whom "float" property is not given. To overcome this issue we use "clear:both/left/right" property to the div whom "float" property is not given. Now the third div will not come up horizontally and the other two div's will show their full data. and the third div will show under them. 
+
+		NOTE: CLEAR:BOTH WILL ONLY WORK WITH DIV NOT WITH SPAN.
+
+
+		To make changes in the last line of the text, then we use text-align-last:center/right/left;
+		From where the text will start, we use text-indent:100px;
+	 -->
+
+	<!-- <div id="first" class="commondiv">This is the first div This is the first div This is the first div This is the first div </div>
+	<div id="second" class="commondiv">This is the second div This is the second div This is the second div This is the second div </div>
+	<div id="third" class="commondiv">This is the third div This is the third div This is the third div This is the third div This is the third div </div> -->
+	<!-- <div style="border:1px solid green;">This is the fourth div</div> -->
+
+	<span style="border:1px solid blue; padding: 10px; " >This is first span</span>
+	<!-- Padding will only work when we make span a div by display:block property as below -->
+	
+	<span style="border:1px solid yellow; padding: 10px; display: block;" >This is first span</span>
+	<span style="border:1px solid green;">This is second span</span>
+	<!-- <div class="spdi1">This is first span div</div>
+	<div class="spdi2">This is second span div</div> -->
+
+	<a href="#">First</a>
+	<a href="#">Second</a>
+	<a href="#">Third</a>
+
+	<div id="loremcol">
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+	</div>
+
+	<!-- <h2>Displaying Image</h2>
+	<img src="DSC02647.JPG" style="max-width:100%; height:auto"> -->
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Common</title>
+	<style type="text/css">
+	p{
+			border: 2px solid red;
+			outline: 2px solid blue;
+			outline-offset: 3px; 	
+			padding: 10px;			
+		}
+		.pad{
+			border: 2px solid blue;
+			padding: 10px;			padding works only with class and Id's
+		}
+		.mar{
+			border: 2px solid green;
+			width: 80%;
+			margin: 10px auto;		// margin auto is used to make the div center and will only work with width 					property.
+		}
+		.wid{
+			width: 70%;
+			border: 2px solid orange;
+
+		}
+		.hig{
+			border: 2px solid tan;
+			width: 40%;
+			min-height: 70px;
+			margin: 10px auto;
+			padding: 5px;
+		}
+		.miwid{
+			border: 2px solid grey;
+			/*min-width: 200px;*/
+			max-width: 200px;
+			
+		}
+		img{
+			width: 100%;
+		}
+		.boxsiz{
+			border: 2px solid darkmagenta;
+			width: 200px;
+			padding: 0 20px;
+			box-sizing: border-box;
+		}
+		.boradius{
+			width: 250px;
+			border: 2px solid violet;
+			background-color: orange;
+			margin: 10px auto 10px auto;
+			float: left;		
+			
+			min-height: 100px;
+			padding:3.2%;
+			text-align: center;
+			box-sizing: border-box;
+			border-radius: 50%;
+		}
+		.boradiusdiv{
+			width: 300px;
+			border: 2px solid pink;
+			margin: 40px 0 0 250px;
+			float: left;		
+			height: 100px;
+			padding: 10px;
+			border-radius: 20px 50px 20px 50px;
+		}
+		.boxshadow{
+			clear: both;
+			border: 2px solid blue;
+			width: 150px;
+			height: 100px;
+			box-shadow: 6px 6px 3px green,10px 10px 6px orange,12px 12px 9px violet;
+			box-sizing: border-box;
+		}
+		.outerbox{
+			width: 100%;
+		}
+		.innerfirst{
+			width: 50%;
+			float: left;
+			padding: 10px 10%;
+		}
+		.innersecond{
+			width: 50%;
+			height: 50px;
+			float: left;
+			background-color: lightgreen;
+		}
+
+	</style>
+</head>
+<body>
+	<p>Outline is the line above the border and outline-offset is the gap between border and outline. </p>
+	<div class="pad">Padding is the inside gap in the div.</div>
+
+	<div style="width:50%; background-color: orange;">
+		<div class="mar">This div's width is 80% and margin auto and it is in another (Parent) div of width 50%.Margin is the gap between two div's. Margin auto is used to make the div center and it will only work with width property.</div>
+	</div>
+	
+	<div class="wid">Always try to give the width of the parent div in pecentage, so that it always remain responsive.</div>
+
+	<div class="hig">There is no need to give the height usually. We give it in the case when if needed and we will always try to use the min-height property, because with min-height the text will not overflow from the box or div.</div>
+	<div class="miwid">With img tag always use max-width and img 100%. With max-width, it will show the full image in the div and will not overflow. Also it will not crop the image. There is no need to give the width with img tag. Always use max-width with 100% img tag.
+		<img src="DSC02601.jpg">
+	</div>
+	<div class="boxsiz">
+		With box-sizing:border-box the width of the box will remain same instead of padding and border thickness.
+	</div>
+
+	<div class="outerbox">
+		<div class="innerfirst">
+			<div class="boradius">
+				Border-radius is used to sharpen the edges of the corners. We can give it in the pixels.
+				And to make the shape ofdffgdfgg dfgdf dfg dfg dfdf g eregtrew the circle, we use border-radius:50%.
+			</div>
+		</div>
+		<div class="innersecond"></div>
+	</div>
+
+
+</body>
+</html>

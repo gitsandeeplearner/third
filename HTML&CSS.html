@@ -1,0 +1,135 @@
+HTML & CSS
+ashrit kumar sandeep kumar
+
+iconfinder.com for icons
+
+To allign all the div's horizontally, we need to give float left/right property to all the div's.
+		 Width is not important while applying the float property. 
+		 If width is given then, then the div will show according to the width, but the horizintal space still will be there. 
+		 Even after giving the width property the "div" will take full horizontal space. So, float property will free up the space and will make the second div to come horizontal to the first div.
+
+		Now suppose if there are three div's and we give float property to two div's, then the third div will automatically comes horizintally up OR If the data in the both the div's is more than the min-height of two div's then the data will overflow on the third div to whom "float" property is not given. To overcome this issue we use "clear:both/left/right" property to the div whom "float" property is not given. Now the third div will not come up horizontally and the other two div's will show their full data. and the third div will show under them. 
+
+div => Width, Padding, Margin works only with div. 
+
+display:none/inline/block;
+		none => it will hide the tag or where it is placed, but the tag will be there.
+		inline => It will make all the blocks inline. e.g menu bar. 
+		block => It will make the span into the block(div).
+
+Span => It is related to the text, Padding, margin, width will not work properly with span. To make the span working like div means working with padding, margin,width we need to give the property display:block; to the span. This will make the block and the next content will move to next line.
+
+span{   // This will not work properly. Beacause span is only related to text, color, backgroundcolor.
+	width:200px;
+	padding:10px;
+	margin:20px;
+}
+
+With display:inline-block; the span tag will function like a block and will take all the properties like padding, margin,width and the display will be like a span.
+
+span{ 	// This will work fine. Because now the span is inline block and will display the tags in one line.
+			e.g-> in the case of <a> tag.
+	display:inline-block => This will treat the tag as a block on the same line not in the next line.No need to 						give the float left. 
+	width:200px;
+	padding: 10px;
+	margin:20px;
+}
+
+span{
+	display:block => This will treat the span tag as a block and will take the full space. float:left is used to 				  free up the space.
+	width: 200px;
+	padding:20px;
+	margin:10px;
+}
+
+
+
+To make changes in the last line of the text, then we use text-align-last:center/right/left;
+
+From where the text will start, we use text-indent:100px;
+
+To break a very long word in div, because if the width is given to a div and the long word will come out of it, then we will use word-wrap:break-word; break property. 
+
+Always try to give the Width in percentage, because in percentage it will take the width according to the screen.
+Pixel width is fixed and when the screen will be small it will display the scroll bar there.
+
+Height/max-height should be in the pixel. Both are fixed.
+With fixed height the text will overflow. Use overflow property with height.
+
+min-height, the text will not overflow and will show the full text within the border or boundries. It will not break the border and will make the height of the div as required by the text.
+
+
+Overflow-x = horizontally (Width) Mostly this overflow will in the case of image.
+Overflow-y = Vertically (Height)
+By text default is overflow:visible
+
+Overflow:hidden/visible property is used when the width of the div is small and text is long, the text will overflow from the div, overflow:hidden; hide the extra text, To overcome this problem we use text-overflow:ellipsis property. It will put three dots(...) after the breaked text and the user will come to know that there is more text left. BUT remember it will work with white-space:nowrap property,overflow:hidden.
+
+In case of height: 
+
+Overflow means the text is going out of the border or boundries of the tag.
+overflow property will only work with "height" attribute not with "min-height" attribute.
+
+if height is given and text height is large, then with overflow:hidden property, it will hide the extra content and text-overflow: ellipsis will not work.
+
+if min-height is given and text height is large, then with overflow:hidden/visible property will not work. Means the text will not overflow and will show the full text within the border or boundries. It will not break the border and will make the height of the div as required by the text.
+
+
+COLUMNS
+
+To divide the text of the paragraph into columns we use column-count:2/3/any property, and for gap betweeen these columns we use column-gap:100px property. Column-rule-width:2px; column-rule-style:solid; will place a line in the gap. 
+
+column-gap:100px
+Column-rule-width:2px; 
+column-rule-style:solid;
+
+shorthand-> 
+column-width:150px will divide the text into column according to the width.  
+column-rule:width style color; 
+
+
+For background image
+background-image:url(path/image-name); -> This will set the image in the background. But the image will repeat in 											background. for this we will use the property :
+background-repeat:no-repeat; background-repeat:repeat; is by default.
+background-position:left top/right top/left center/right center/center center/right bottom left bottom;
+background-position:x-axis(100px) y-axis(200px) ;
+For mulitple images:
+background-image:url(path/image-name),url(path/image-name),url(image/image-name);
+background-repeat:no-repeat, no-repeat,no-repeat;
+background-position:100px 200px,200px 250px,300px 450px; 
+
+For shorthand: 
+background:url(path/image-name) no-repeat 100px 200px;
+background:url(path/image-name) no-repeat 100px 200px, url(path/image-name) no-repeat 300px 500px;
+
+By default, the background image will scroll with page, If we need it fixed then, we will use
+background-attachment:fixed;
+
+For the positioning of any tag, we use
+position: static/relative/abolute
+left:100px;
+top:200px;
+			relative => changes the position of the tag from the current position.
+			absolute => changes the position of the tag w.r.t the screen and the tag will come over the other tag where the position goes after giving the absolute position. This tag will not scroll down as the page scroll down.
+			fixed => Will fix the tag on that given particular poistion wrt screen and will scroll down as the page will scroll down.    
+
+			If the relative div is in another div, then it will change the position according to the div in which it is contanied. Means relative works according to where it is currently placed.
+
+If any div is under any another div aur hum niche wale div ko upper lana chahte hain to z-index:1 use karte hain. for more div's z-index:2, z-index:3.
+
+
+opacity:(0-1); => it relates with the transparency 0=>less 1=>full
+
+if we are using same color many times, then we can declare that color in the :root{} and with the help of var(); function we can call that color any where.
+e.g :root{
+	--main-color:blue;
+} 
+h2{
+	color:var(--main-color);
+}
+
+If we want the text not to copy or select then we use:
+user-select:none;
+
+
+
