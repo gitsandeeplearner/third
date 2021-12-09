@@ -46,3 +46,9 @@ h1{
 	padding: 5px;
 
 }
+.outer{
+	border: 1px solid red;
+	margin: 0px auto;
+	width: 30%;
+
+}
