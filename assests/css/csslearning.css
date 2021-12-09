@@ -1,0 +1,234 @@
+body{
+	background: lightblue url("img_tree.png") no-repeat top right  ;
+	font-size:100%;/*The solution that works in all browsers, is to set a default font-size in percent for the <body> element:*/
+}
+/*body{
+	background-image:url("DSC02647.jpg");
+	background-repeat:no-repeat;
+	background-position:top right;
+	background-attachment:scroll; /*or it may be fixed*/
+	/*background-size:cover;  Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges.
+	background-size:auto;
+	border-radius:2px; it will round the borders
+
+}*/
+h1,span{
+	color:blue;
+}
+div{
+	background-color:linen;
+	padding:10px;
+	color:grey;
+	
+}
+withoutext{
+	display:block;
+	margin:20px;
+	background-color:grey;
+	width:300px;
+}
+withext{
+	display:block; /* override container ko niche le ata hai*/
+	margin: 20px;
+	background-color:yellow;
+	padding:30px;
+	width:300px;
+	text-align:justify;
+	text-indent:70px; /*Will give the space on the first line*/
+	line-height:1.8;/*This is for the spacing between the lines*/
+	/*text-shadow:4px 3px orange;This gives the shadow to the text(words) horizontally and vertically*/
+	/*border:1px solid red;*/
+	/*For responsive fontsize The text size can be set with a vw unit, which means the "viewport width".*/
+	/*font-size:10vw*/
+	font-family:sans-serif, Arial;
+	/* For icon we will use bootstrap, font awesome and google icon css*/
+
+}
+
+#textdec{
+	text-decoration:underline;
+	text-transform:capitalize;
+	
+}
+
+/* If the property "display:block" is given to an inline element, it will break the next line to a new line beacuse 
+the inline element now has become a block, but if it is given to a class or an id then it will not break and
+continue with the same line*/
+
+/* Tag and class/id will not share the same property
+Wrong format -> span .a
+Right format -> span.a
+Note: There should not be space between tag and class/id;
+
+"display:inline-block" property will keep the two blocks in the same line.
+
+"Block takes the full width of the screen and new element starts from the new line, but the width of the
+block can be handled with "width" property and giving the "margin:auto" which is must. "width=500px" property will give 
+problem on the small screens and will show a horizontal toolbar but with the 
+"max-width:500px" and "margin:auto" ( "margin:auto" takes the block or the content of the block to the center ) property it will not show the horizontal toolbar on the small screens.
+NOTE: Always use max-width for the better results with responsiveness;
+*/
+
+.fstyle{
+	font-style:italic; /*This will make the text italic*/
+}
+
+newext{
+	background-color:green;
+	width:300px;
+	padding:20px;
+	display:block;
+	margin:20px;
+	box-sizing:border-box;	/* This will not add the padding and order to the total width and the width will remain the same as actual width*/
+	font-size:20px;/* By default the size of the text will be 16px
+	16px=1em To allow users to resize the text (in the browser menu), many developers use em instead of pixels.*/
+}
+justfor{
+	background-color: orange;
+	padding:30px;
+	display:block;
+	margin:10px;
+}
+
+.a{
+	background-color: red;
+	/*padding:20px;*/
+	/*display: inline-block;*/
+}
+.b{
+	background-color: red;
+	padding:20px;
+	display: block;
+}
+.first_para{
+	display:block;
+	max-width: 800px;
+	/*margin: auto;*/
+}
+/* Links
+There are four state of the links which must follow the following order
+1)Link
+2)Visited
+3)Hover
+4)Active 
+*/
+a:link{
+	color:pink;
+	text-decoration:none;
+}
+a:visited{
+	color:yellow;
+	text-decoration:none;
+}
+a:hover{
+	color:red;
+	text-decoration:underline;
+}
+a:active{
+	color:green;
+	text-decoration:underline;
+}
+/*
+css for the nth tr(/row) of the table will be like tr:nth-child(odd/even){background-color:#ffffff;}
+and for hover tr:hover{background-color:#000000;}
+*/
+
+.fixe{
+	border:1px solid red;
+	padding:5px;
+	position:fixed;
+	bottom:0px;
+	right:0px;
+}
+
+/*
+Every element has "position" value which we will use with top, left, bottom and right property.
+By default every element have static position. It has no top, bottom, left, right property.
+
+Margin-top is the margin between two elements. But position:absolute ; top:80px; is from the top of the screen
+and in position:relative; top:80px; is the position with respect to its actual position.
+
+Position relative is compared to the normal/actual position of the element.And we can move that element
+with the top, left, bottom and right property from its original position. Suppose we are not using 
+these property with the relative position then it will behave same as the normal position.
+
+position:fixed; fixed the element and it will move up and down on scrolling the page.
+We need to declare the property where to show the element by giving 0px to the property.
+
+By position:absolute; we can move an element anywhere and its postion will be with respect to its property
+(top,right, bottom,left). It works on the behalf of the property given. And if it is in the another element 
+then it will take the properties according to that element.
+We can remove the problem of overlapping of two elements with the help of absolute position.
+With the help of z-index we are remove overlapping. If z-index:-1; it will be shown behind the others. 
+
+Position:sticky; means the element is stuck and will move down while scrolling. Best exapmle are the menus.
+And for Safari it is declared with webkit like position: -webkit-sticky;
+
+
+*/
+.container{
+	position:relative;
+}
+.imgtext{
+	position:absolute;
+	top:30px;
+	left:20px;
+}
+/*
+Overflow attribute is used to control the text of an block element. 
+NOTE: It only works with the block element.
+Overflow attribute has the following properties:
+visible -> This is by default property, In this text will not be cut and will be shown outside the element box
+hidden -> The text which will be out of box will be cut. Only the text which is in the box will be visible.
+scroll -> If the width of the box is small and text is more then it will add a scrollbar to the box.
+auto -> This is similar to the scroll but it adds scroll only when it is needed.
+
+In this img tag should be placed before the text.
+
+*/
+
+.floa1{
+	float:right;
+}
+
+.floa2{
+	float:left;
+}
+.elecen{
+	padding:5px;
+	background-color:grey;
+	color:white;
+	margin:auto;
+	width:50%;
+
+	text-align:center;
+
+}
+/*
+If an element is taller than the element containing it, and it is floated, 
+it will overflow outside of its container. You can use the "clearfix" hack to fix this
+
+*/
+
+.clearfix{
+	overflow:auto;
+}
+div p{
+	padding:5px;
+	background-color: red;
+	color:white;
+}
+
+/*
+opacity means transparency of the image. By default it is 1 which means clear image.
+0.2 means less transparancy
+0.5 has more clearance than 0.2 
+*/
+
+.op{
+	opacity:0.2;
+
+}
+.op:hover{
+	opacity:1;
+}
