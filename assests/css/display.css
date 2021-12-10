@@ -56,11 +56,18 @@ h1{
 	border: 1px solid green;
 	width: 30%;
 	margin: 0 auto;
+	padding: 20px;
 	display: flex;
 	position: relative;
 	top: 10px;
+	box-sizing: border-box;
 }
 .flexboxes{
 	width: 50px;
 	padding: 5px;
+	text-align: center;
+}
+.below-relative-pos{
+	border: 1px solid blue;
+	padding: 10px;
 }
