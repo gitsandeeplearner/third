@@ -1,0 +1,252 @@
+REMOTE REPO: GitHub and Bitbucket , Sourcetree
+GITHUB LOGIN : USERNAME: gitsandeeplearner/@welcome25
+
+Git is Distributed VERSION control system means every system(PC) have their own local repository where we can store the files and later we can upload these files on the server.
+
+TRUNK BASED DEVELOPMENT: To work on two projects simultanesously.
+e.g. If the stable products has version 4.4 which is released and live. Now we are working on the new feature for the VERSION 4.5. But in between there comes a bug in live project which has VERSION 4.4. Now we can handle this situation with branching in GIT. 
+
+We will make the stable version as the MASTER BRANCH (4.7) and will NOT work on this master branch. We will create the new copy of the master branch (5.0) and will start working on this branch for the new feature development. When the development of 5.0 will be finished, we will merge 5.0 branch with 4.7 branch. This is trunk based development means creating the BRANCHES.
+
+rm -rf .git = will remove the git from the directory.
+
+git init = To initalize the local repo folder.
+	ls = list all the files and the folders in the local repo
+	ls -lart = list all the files and folders along with the hidden files. ( It will also show the .git hidden file in the intilaze folder )
+
+To check if these user name and email is set or not, just type 
+	git config --global user.name => It will show you the set username.
+	git config --global user.email => It will show you the set email.
+
+Open the terminal and set the configuration of git by adding git username and email.
+	git config --global user.name gitsandeeplearner
+	git config --global user.email rathore25sandeep@gmail.com
+
+
+There are three stages of the files
+
+1) Working file Or Working directory in which we are currently working.
+2) Staging -> We can call this as a production area or the operational area, Suppose we are working on creating a 				function, kuch lines tak hamara code theek chal reha hai, to hum waha tak code ko staging mode mein 			  rakh lenge aur function ko create karne ke liye age code shuru kar denge apni working directory 				  mein, sath hi yaha tak code theek chal reha hai waha tak staging mode mein rakhte rahange. 
+			  To add the code to the staging, We use the following command:
+			  git add filename
+			  git add . ( to add all the untracked files. )
+			  To add more some selected files, We use following:
+			  git add filename filename filename
+
+			  Agar kahi error a jati hai ya file delete ho jato hai to hum staging mein se theek code dubara le sakte hain with the help of checkout command. 
+
+			  Agar hum staging se backup lena chahte hain apni working directory mein to "git checkout" use karte hain.
+			  
+			  git checkout = git checkout contact.html
+			  				 It will revert the contact.html file from the STAGING area to the current working	directory. 
+
+			  git checkout -- differ.html = If this file is present in the staging then it will take the backup from staging. Agar file staging mein nahi hai to yeh command last commit se data load kar degi. means backup from commited file if it is not present in the staging area.
+
+			  Aur agar hum "Commit" se backup lena chahte hai to "git checkout hashId filename" use karte hain.
+			  Working file ko last commit se load kar dega BUT also staging mein bi kuch nahi hoga. Working file ka sara data delete kar dega.
+
+			  OR
+			  file ko restore karo with the help of git restore --staged se and then run git checkout -- differ.html
+
+			  git checkout -f = will revert all the changes from all the files with last commit.  
+
+			  Agar file DELETE ho gayi hai to always use:
+			  git restore filename = It will restore from staging if present otherwise from the commited file.
+
+
+			  Agar koi file galti se stage ho gayi hai, matlab kuch adoori lines jo ki data proper or pura nahi hai, to muje kal ko incomplete backup milega from staging. To theek karne ke liye use kare "git restore --staged filename":Agar kahi lage ki muje is file ko Stage nahi karna to main us file ko restore kar sakta hu, aur fir file dubara modified stage mein a jayegi means in the working directory.
+
+			  git restore = git restore --staged filename, to unstage the file from staging area. Now the file will be in the working directory and The data will be there in the "modified" form.means once the file is added into the staging area and we can take the backup. 
+				  
+			  git restore --staged . = ab staging mein koi bi data nahi hoga as a backup. Jo bi data staging mein hai Last commit tak, use modify form mein le ayega aur eb staging mein koi bi data nahi hoga.file ko staging se bahar le ayega To unstage all the files which you recently staged.
+			  git rm --cached filename = It will change the state of the file to "untracked" file with all the data in the working directory there.
+
+			  YEH DONO COMMAND FILE KO STAGING AREA SE BAHAR NIKAL DEGI, FARK YEH HOGA KI "RM" SE FILE BILKUL UNTRACK HO JAVEGI AND RESTORE SE MODIFY FORM MEIN A JAYEGI JISE HUM FILE MEIN KAM KARNE KE BAAD MODIFY SHOW KARTE HAIN JAB FILE STAGE NAHI HOTI. AUR FIR DUBARA RESTORE KARNE SE FILE KI SABI CHANGES DISCARD HO JAYEGI AND DUBARA LAST STAGE MEIN A JAYEGI. 
+
+			  git restore filename = file mein LAST COMMIT tak data rakh dega baki sab delete kar dega.
+
+			  File Unstage karne ke baad agar aap changes ko revert karna chahte ho to RESTORE command se kar sakte hain. All the changes before the LAST COMMIT will be discarded. Now this file will not be shown as modified any more. File apni pehli postion per ajayegi(w.r.t last commit) jise file per koi kam nahi kiya.
+  
+							   
+3) Commit(Local Repo) ->  If our code is working well without any error and is ready, then we can Commit this code. Means the code is safe and ready to move on the server. Please note that while commiting the code we need to put an appropriate message for the commit. Because commit makes the logs(records). 
+
+			 	git commit = Final files which are ready to move on the server.
+				git commit -m "appropriate message".
+				agar message nahi diya hai to , it will open a vim editor, type the message there and type :wq! to exit from the vim editor.
+
+				git commit -a -m "message" OR (-am "") = This will skip the staging area and commit directly with one command. BUT ONCE YOU HAVE TO ADD THE NEW CREATED FILE WITH GIT ADD -A COMMAND. THEN WE CAN USE THIS COMMAND.
+
+			 In future if there is any error, to hum commit ke logs ko check karke, yaha tak code theek chal reha tha, messages ki help se code revert back kar sakte hain. 
+
+			 With the help of the messages we can check that on this particular commit which functionality is added in the code or file. 
+
+			 For revert back, we will use the following command:
+
+			 git revert = To back to any commit and it will save the rest of the data with another commit.
+				 		  git revert commitId.
+
+			 git reflog = 	This will show all the logs/history of the commits. And we can use this command to move to any commit.	
+$ start chrome = To shart chrome.
+
+$ code . command is used to open the visual studio.
+
+There are two ways to get the code a) Clonning b) initalizing
+
+Clonning will take the full data from the server to local repo. => will study it later.
+Initalizing will intalize the local repo. 
+	Commands 
+
+	To open Sublime editor or files/folder in Sublime from git terminal -> On comd promt, type sysdm.cpl. It will open the advance system property box where we add new enviornment variable for sublime editor and will give the path where the sublime editor is installed. Now under the path variable add ";%SUBLIME%" at the end. Restart the terminal. 
+	Sublime is ready now. TYPE subl.exe OR subl ( subl.exe filename ) in terminal and sublime will open.
+
+
+
+	My computer->properties->Advanced->Enviornment variable->New->path of sublime editor installed->changes in path varibale
+
+CONTEXT MENU(RIGHT CLICK) + S IS USED TO OPEN GIT BASH TERMINAL.
+
+
+	git init = To initalize the local repo folder.
+	ls = list all the files and the folders in the local repo
+	ls -lart = list all the files and folders along with the hidden files. ( It will also show the .git hidden file in the intilaze folder ) 
+	
+
+	$ touch = create new file. 
+			  $ touch abc.html => create new abc.html blank file.
+
+	$ subl abc.html = To open a file in Sublime editor.
+
+	.gitignore = If we want some files not to be tracked by git, then we will create a file by name .gitignore. 			 and put the name of the files which should not be tracked in this file e.g Readme.txt then git 			 will not track this file. Also we need to add .gitignore file in the staging server and will  				 always commit this file. Now if we make any change in the files mentioned in .gitignore file 				 then this change will not be tracked by the git.
+
+	git status = Show all the untracked and modified files means on which you have recently worked OR the file which is not added/tracked by the git. In other words, file is in the working folder/directory. Whenever you make the changes in the file, go for git status, It will always show the untracked files.
+
+
+	git add = To add the files in the staging area. 
+			  git add --a ( to add all the untracked files. )
+			  git add .  ( to add all the untracked files. )
+			  git add filename. ( write "git add 'in' and press tab button , it will automatically add index.html as sufix ). Now the file is tracked by git. and the file is ready to commit means it is ready to push on the server with all the final changes (Local repo). ( Extra it was written earlier -> to save on local repo).
+			   
+	
+	git commit = Final files which are ready to move on the server.
+				git commit -m "appropriate message".
+				Git commit means saving the files on our local repo.
+				Staging enviornment means the files which are ready to move for the commit or for the final selection. We can Edit/Remove the files which are in the staging area. Again these files will become modified and again we need to add these files in the staging area to commit. 
+
+	git commit -a -m "message" = This will skip the staging area and commit directly with one command. BUT ONCE 							 YOU HAVE TO ADD THE NEW CREATED FILE WITH GIT ADD -A COMMAND. THEN WE CAN USE 								 THIS COMMAND.
+
+	git commit --amend -m "message" = To change the recent message.
+
+	git rebase -i Head~2 = It will change the message of the second commit.
+
+	git log = To see all the commits and the messages.
+
+	git log abc(filename) = This will show the logs of abc file only.
+
+	git log --name-only = This will give the file name and message.
+	
+	git log -n 5 --author=Salvador = To get the last/recent 5 commit.
+
+	git log -2 = To get last two commits.
+
+	git log -p = To see what are the changes (means the difference) in the new committed file along with the logs.
+
+	git log --oneline -3 = This will show the last 3 commits in oneline along with hash value and commit message. 
+
+	git log --pretty=oneline | tail -n 10 = This will show the commit information in one line as 												 hash value and commit message.
+
+	git log --pretty=short = this will show the commit information in very short manner.
+
+	git log --since=2.days = shows the log according to the time(in this case logs of 2 days ago).
+
+	(Good)git log about.html --oneline -2
+	OR
+	(BEST)git log --stat -2 = It will show the commit history along with the file name. 
+
+	:q = This is used to get back the command terminal of the git.
+
+	:wq! = To exit from the vim editor.
+
+	git diff = To check if the working and staging file are same.It will check the difference between file which 			is in the working directory and the file which is in the staging. We can revert the changes with 			"git checkout" command and now the working directory have the file which will be in the staging 			area.
+
+	git diff about.html = will check the diff between the working and staging about.html.
+						Agar koi difference nahi milta to means both WORKING and STAGING files are same.
+
+	git diff --staged = This will check the difference between the staging file and between Commited/repo file.
+
+	git diff --staged about.html = will check the difference between staging and commited about.html	
+
+	git checkout = It will revert the contact.html file from the STAGING area to the current working 							directory.   
+					git checkout contact.html
+					git checkout -f (It will revert back all the changed file with the last commit.)
+
+	git checkout hashId filename = It will revert the file from the LOCAL repo(Commited file) not from the 									   staging to the working file. 
+
+	HEAD DETACHED AT = This means a new branch is there and head is switched to that branch. To go back to the main branch, just type git checkout master.
+
+	Modified->Green = File staged
+	Modified->Red =   File is not staged yet.
+	git restore = git restore --staged filename, to unstage the file from staging area. Now the file will be in 			  the working directory and The data will be there in the "modified" form in red color. 
+				  
+				  To delete the changes from the last commit in the staging file, we  use git restore filename, BUT first we need to restore this file from the staging.
+				  To untrack/unmodify the file and again all the changes will be discarded. Now this file will not be shown as modified any more. Yeh apke staging ke sare kam ko delete kar dega LAST COMMIT tak and now the commited file and working file will be same.
+
+	git reset = To rollback the changes in the git commit.
+	
+				git reset --hard hash value of the old commit. 
+				e.g reset to 2nd commit from 4th commit.
+					This will remove all the other later on commits from the 2nd commit AND load the current file with the 2nd commit in the working directory. ALL THE DATA WILL BE LOST AFTER THE 2ND COMMIT.
+					check git log.  
+				git reset --soft hash value of the old commit.	
+					This will also remove the later on commits from the 2nd commit along with the log, BUT THE CONTENT WILL BE THERE IN THE FILE AND IT WILL NOT BE LOST. NOW ALL THE DATA AFTER THE 2ND COMMIT WILL BE IN THE STAGING AND NEEDS TO BE COMMITTED AGAIN. So, there will not be the loss of the data.
+					matlab "login functionality" tak 2nd commit kiya. After that 3rd commit and 4th commit.
+					Per kuch der baad koi error ane ke karan maine 2nd commit tak reset kar liya, to meri file se 3rd and 4th commit ka data jayega nahi, balki wo bi wahi rehega aur file staging mein rahegi.
+					git se 3rd and 4th commit khatam ho jayegenge. now file aisi hogi jaise login tak sab kuch theek chal reha hai aur uske baad maine jo galat code kiya hai wo bi staging mein hoga, jise mein theek karunga.
+
+	We can modify both the staging and committed file.
+
+	git revert = To back to any commit and it will save the rest of the data with another commit.
+				 git revert commitId.
+
+	git reflog = 	This will show all the logs/history of the commits. And we can use this command to move to any				  commit.	
+					git reflog show chat (branchname). It will show only the log of chat branch.
+
+	git branch = To create branch. This branch will be created on local.
+				 git branch chat (branchname). All the data of the main branch will also be copied in the new created branch.
+				 git branch will list all the branches.
+
+	git checkout = To enter into branch
+				   git checkout chat 
+
+	git checkout -b chat = To create branch and enter into the branch.
+
+	git merge branchname= It will merge the branch to the main branch.
+				Go to the branch where you want to merge with git checkout branchname
+				now git merge branchname ( the branch which needs to be merged)
+				git log. It will show all the commits of main and merged branch.
+
+	$ clear =  To clear the terminal.
+
+
+	git rm = It will remove the file from the working directory as well as from the staging.
+			 git rm waste.html
+
+	git rm -r directory name = This will remove the directory.			
+
+	git rm --cached waste.html = It will remove the file from the staging means it will stop tracking the file, but will not remove it from the working directory. We use the staging area as a backup for current working file.
+
+	If we make some changes, then git will track these changes. But after some time we remove the changes, then git will still track these changes and will show the file in the "modified" state to add in the staging area. If we don't want these changes to add in the staging area then simply "UNDO" the changes, means make the file on old state. Then git will not show file modified. 
+
+
+	git clone : It will take the all the files and folders from github(remote) on our local machine.
+				git clone url(shift + insert) myclone (name of the folder on local machine)
+
+
+******************To push the local repo on remote******************************************************
+
+
+1) Add or link the git remote repo with your local repo by using,
+	 git remote add origin "remote repo link" where origin is the alias of link and it can be any name.
+
+2) Now push your local repo on remote repo by using,
+	git push -u origin/second_remote(remote branch) master(local branch) = -u is as a refrence, it will link the local branch(master in this case) with the origin(remote repo) 
+
