@@ -8,11 +8,13 @@
 </head>
 <body>
 	<div class="container">
-		<h1>There are four properties of display: none, block, inline, inline-block<br>
+		<h1>There are following properties of display: none, block, inline, inline-block<br>
 			display: none -> Yeh us div ko hide kar dega jis per yeh laga hua hai .<br>
 			display: block -> Yeh new line se shuru hota hai aur ismein hum width, height, margin, padding de sakte hain. By default yeh puri width leta hai.<br>
 			display: inline -> Yeh span ki tarah kam karta hai. Yeh utni hi jagah leta hai jitni isko jarurat hoti hai. Yeh new line se shuru NAHI hota hai aur upper wala tag khatam hote hi shuru ho jata hai. Ismein width, height, padding, margin kam nahi karte hain.<br>
-			display: inline-block -> Yeh bi EK hi line se shuru hota hai aur width, height, margin, padding sabi kam karte hain.  
+			display: inline-block -> Yeh bi EK hi line se shuru hota hai aur width, height, margin, padding sabi kam karte hain.<br>
+			display:flex: PARENT div ko display flex do to INTERNAL wale sare div's/block's inline ho jayege.
+
 
 		</h1>
 		<div class="outer-inline">
@@ -31,6 +33,9 @@
 		</div>
 		<div class="below-relative-pos">
 			<p>Upper div has position relative, That's why it is overlapping with this div. Agar hum position relative ki jagah "margin" denge upper wali div ko to yeh overlap nahi karega .</p>
+		</div>
+		<div class="outer-absolute">
+			This text is for position absolute w.r.t &lt;body&gt;
 		</div>
 	</div>
 </body>

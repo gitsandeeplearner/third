@@ -1,6 +1,6 @@
 body{
 	font-family: arial,helvetica;
-	margin-top: 0px;
+	margin: 0px;
 }
 h1{
 	font-size: 15px;
@@ -70,4 +70,12 @@ h1{
 .below-relative-pos{
 	border: 1px solid blue;
 	padding: 10px;
+}
+.outer-absolute{
+	border: 1px solid lightcoral;
+	margin: 10px 0;
+	padding: 5px;
+	position: absolute;
+	top: 0px;
+	left: 20px;
 }
