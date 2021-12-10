@@ -52,3 +52,13 @@ h1{
 	width: 30%;
 
 }
+.outer-flex{
+	border: 1px solid green;
+	width: 30%;
+	margin: 0 auto;
+	display: flex;
+}
+.flex{
+	width: 50px;
+	padding: 5px;
+}
