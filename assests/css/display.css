@@ -46,7 +46,7 @@ h1{
 	padding: 5px;
 
 }
-.outer{
+.outer-inline{
 	border: 1px solid red;
 	margin: 0px auto;
 	width: 30%;
