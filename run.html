@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        /* Properties - rotate
+                        translate (means div ki position ko change karna x aur y axis ke according),
+                        skew (matlab teda meda karna),
+                        scale(matlab size ko 1 ya 2 ya 3 so on guna karna) */
+        .main {
+            margin: 50px auto;
+            width: 200px;
+            height: 250px;
+            background-color: orange;
+            color: white;
+        }
+
+        .box {
+
+            margin: 50px auto;
+            width: 200px;
+            height: 250px;
+            background-color: pink;
+            transform: translate();
+            transition: transform 1s;
+            /* transition is for the smootheness of any effect on the property */
+        }
+
+        .box:hover {
+            transform: translate(40px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">This is transform 2D</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - 5</title>
+    <style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+        *{
+            margin:0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            font-weight: 300;
+            font-family: "Roboto", sans-serif;
+        }
+        .wrapper{
+            /* border: 1px solid blue; */
+            width: 88vw;
+            margin: 0px auto;
+        }
+        #header{
+            /* border: 1px solid green; */
+            height: 16.5vh;
+            padding-left: 70px;
+            padding-top: 10px;
+            box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.05);
+            position: sticky;
+            background: white;
+            top: 0;
+            z-index: 50;
+        }
+        #section-2{
+            min-height: 130vh;
+            padding-top: 20px;
+            box-shadow: 0px 5px 0px 0px rgba(1, 1, 1, 0.05) ;
+        }
+        .image-text{
+            display: flex;
+            gap: 100px;
+            justify-content: center;
+            align-items: center;
+        }
+        /* #text{
+            width: 40vw;
+            height: 50vh;
+            padding-top: 80px;
+            margin: 0 auto;
+        } */
+        h3{
+            width: 18vw;
+            background-color: green;
+            padding: 8px;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+        h1{
+            text-transform: capitalize;
+            font-size: 72px;
+            font-weight: 400;
+        }
+        h2{
+            text-transform: capitalize;
+            color: gray;
+            /* font-size: 80px; */
+        }
+
+        #explore{
+            background-color:khaki;
+            padding: 10px;
+            border: 0px;
+        }
+        #text h1,p{
+            margin-bottom: 20px;
+            word-spacing: 1px;
+        }
+        .icons{
+            display: flex;
+        }
+        .icon-image{
+            /* border: 1px solid red; */
+            margin-top: 100px;
+            width: 30vw;
+            display: flex;
+            padding: 10px;
+        }
+        .icon-image img {
+            width: 72px;
+        }
+        .icon-image:hover{
+            box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.05);
+         /* box-shadow: 1px 1px 1px 0px linen; */
+            border-radius: 3px;
+        }
+        .icon-text{
+            margin-left: 10px;
+        }
+        #menu{
+            margin-top: 60px;
+        }
+        .menu-button{
+            text-align: center;
+        }
+        #menu-button{
+            border: 0px;
+            width: 6vw;
+            background-color: green;
+            padding: 8px;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .menu-text{
+            text-align: center;
+            margin: 50px 0;
+        }
+        .menu-images{
+            display: flex;
+            justify-content: space-between;
+        }
+                
+        img{
+            border-radius: 15px;
+        }
+        img:hover {
+            transform: scale(1.05);
+            transition: 0.2s ease-in-out;
+        }
+        .first-div{
+            display: flex;
+            justify-content: space-between;
+
+        }
+        #footer{
+            margin-top: 50px;
+            background-color: #fff0db;
+        }
+        .footer-inner{
+            display: flex;
+            justify-content: space-between;
+            padding: 30px ;
+        }
+        ul li{
+            list-style: none;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .support-input{
+            margin-top: 10px;
+            /* padding: 5px 40px; */
+        }
+        input{
+            width: 20vw;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="header">
+            <img src="assests/images/logo.png" alt="logo">
+        </section>
+        <div class="wrapper">
+            <section id="section-2">
+                <div class="image-text">
+                    <div id="image">
+                        <img src="assests/images/hero_image.png" alt="main-image">
+                    </div>
+                    <div id="text">
+                        <h3>50% Off On All Products</h3>
+                        <h1>enjoy your delicious food</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa dignissimos voluptatibus quae dolore praesentium nihil aperiam provident natus ex.</p>
+                        <button id="explore">Explore Now</button>
+                    </div>
+                </div>
+                <div class="icons">
+                    <div class="icon-1">
+                        <div class="icon-image">
+                            <img src="assests/icons/discount.png" alt="discount-voucher">
+                            <div class="icon-text">
+                                <h2>discount Voucher</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel officia iure ipsam magni .</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-2">
+                        <div class="icon-image">
+                            <img src="assests/icons/fresh.png" alt="fresh-healthy">
+                            <div class="icon-text">
+                                <h2>Fresh Healthy Food</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel officia iure ipsam magni.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-3">
+                        <div class="icon-image">
+                            <img src="assests/icons/delivery.png" alt="discount-voucher">
+                            <div class="icon-text">
+                                <h2>Fast Home Delivery</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel officia iure ipsam magni.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <section id="menu">
+            <div class="menu-button">
+                <button id="menu-button">Our Menu</button>
+                <div class="menu-text"><h2>Explore Our Menu</h2></div>
+            </div>
+            <div class="menu-images">
+                
+                <div class="first-menu-div">
+                    <div class="upper-images">
+                        <img src="assests/images/grid_image1.png" alt="grid_image1">
+                    </div>
+                    <div class="lower-images first-div">
+                        <img src="assests/images/grid_image4.png" alt="grid_image4">
+                        <img src="assests/images/grid_image5.png" alt="grid_image5">
+                    </div>
+                </div>
+                <div class="second-menu-div">
+                    <div class="upper-images">
+                        <img src="assests/images/grid_image2.png" alt="grid_image2">
+                    </div>
+                    <div class="lower-images">
+                        <img src="assests/images/grid_image6.png" alt="grid_image6">
+                    </div>
+                </div>
+                <div class="third-menu-div">
+                    <div class="upper-images">
+                        <img src="assests/images/grid_image3.png" alt="grid_image3">
+                    </div>
+                    <div class="lower-images">
+                        <img src="assests/images/grid_image7.png" alt="grid_image7">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+        <section id="footer">
+            <div class="wrapper">
+                <div class="footer-inner">
+                    <div class="company-logo">
+                        <img src="assests/images/logo.png" alt="logo">
+                    </div>
+                    <div class="main-links">
+                        <h2>Main Links</h2>
+                        <ul class="internal-links">
+                            <li>Order Tracking</li>
+                            <li>New Order</li>
+                            <li>Contact Us</li>
+                            <li>News & Blogs</li>
+                        </ul>
+                    </div>
+                    <div class="support">
+                        <h2>Support</h2>
+                        <ul class="internal-links">
+                            <li>About Us</li>
+                            <li>Privacy Policy</li>
+                            <li>Terms & Conditions</li>
+                        </ul>
+                    </div>
+                    <div class="support-2">
+                        <h2>Support</h2>
+                        <p class="support-input">
+                            <input type="text" placeholder="Enter Your Email...">
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

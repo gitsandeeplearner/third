@@ -1,0 +1,50 @@
+<!-- Absolute units - px
+Relative units - em,rem,vh,vw,% - It depends upon parent width. 
+
+% = Yeh kam karti hai apne parent tag ke according. Agar outer parent tag ki width de rakhi hai to inner tag ki width uske parent tag ke according kam karegi.
+
+1em = 16px, 16px is the default font-size of the browser, "em" apne parent tag ke hisab se font-size lega. Agar parent tag nahi hai to yeh body tag ke hisab se font-size lega.
+
+1rem = 16px, rem apne parent ke hisab se font-size nahi leta, yeh sirf html tag mein jo font-size define hoga usi ke hisab se font-size lega. 
+html{
+    font-size:13px;
+}
+#inner-box{
+            font-size: 1rem; isme font-size html tag ke hisab se lega, 13px in this case.
+        }
+
+vw = viewportwidth
+vh = viewportheight
+
+Yeh dono browser ki width aur height ke according kam karegi. Chahe outer tag ko width de rakhi ho in px per inner tag ki width irrespective to outer tag width kam karegi agar yeh vw mein le rakhi hai, yeh sirf browser ki width ke according hi kam karegi. 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+    <style>
+        #outer-box{
+            border: 1px solid black;
+            height: 500px;
+            width: 70%x;
+            font-size: 14px;
+        }
+        #inner-box{
+            border: 1px solid red;
+            height: 300px;
+            width: 50%;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+<div id="outer-box">
+    <div id="inner-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptate minus molestiae dolore, dolorum asperiores reiciendis omnis praesentium itaque suscipit iusto at laudantium aut repellat sapiente quisquam libero quibusdam ex aliquam commodi et. Repellat sunt laborum eos corrupti doloribus fugit voluptatibus in quaerat aut corporis deserunt consectetur reprehenderit, provident culpa unde ipsa optio nulla odio tempora sapiente! Suscipit eius, quidem tenetur nobis, harum repudiandae consequuntur, quaerat corrupti quam explicabo unde ratione ad veniam corporis omnis veritatis neque! Est at asperiores, itaque cumque mollitia repellendus. Tenetur inventore, debitis vel tempora quos odio dicta commodi consectetur ullam soluta laboriosam excepturi ratione et?</div>
+</div>    
+</body>
+</html>

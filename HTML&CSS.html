@@ -1,7 +1,16 @@
 HTML & CSS
 ashrit kumar sandeep kumar
-
+html{
+	scroll-behaviour:smooth;   jab hum one page website banate hain to menu links ko section ke sath jodete hain ,                      to scrolling mein jatka na dene le liye hum yeh property use karte hain.
+}
 iconfinder.com for icons
+&copy; => Copyright
+&lt; => less Thanks
+&gt; => greater than
+
+netlify to host the website freely
+
+Always follow the hirerachy for h1, h2,h3,h4,h5,h6
 
 To allign all the div's horizontally, we need to give float left/right property to all the div's.
 		 Width is not important while applying the float property. 
@@ -23,20 +32,19 @@ span{   // This will not work properly. Beacause span is only related to text, c
 	width:200px;
 	padding:10px;
 	margin:20px;
-}
 
 With display:inline-block; the span tag will function like a block and will take all the properties like padding, margin,width and the display will be like a span.
 
 span{ 	// This will work fine. Because now the span is inline block and will display the tags in one line.
 			e.g-> in the case of <a> tag.
-	display:inline-block => This will treat the tag as a block on the same line not in the next line.No need to 						give the float left. 
+	display:inline-block => This will treat the tag as a block on the same line not in the next line.No need to give the float left. 
 	width:200px;
 	padding: 10px;
 	margin:20px;
 }
 
 span{
-	display:block => This will treat the span tag as a block and will take the full space. float:left is used to 				  free up the space.
+	display:block => This will treat the span tag as a block and will take the full space. float:left is used to free up the space.
 	width: 200px;
 	padding:20px;
 	margin:10px;
@@ -79,6 +87,7 @@ COLUMNS
 
 To divide the text of the paragraph into columns we use column-count:2/3/any property, and for gap betweeen these columns we use column-gap:100px property. Column-rule-width:2px; column-rule-style:solid; will place a line in the gap. 
 
+column-count:2/3/any
 column-gap:100px
 Column-rule-width:2px; 
 column-rule-style:solid;
@@ -106,7 +115,7 @@ By default, the background image will scroll with page, If we need it fixed then
 background-attachment:fixed;
 
 For the positioning of any tag, we use
-position: static/relative/abolute
+position: static/relative/abolute/sticky
 left:100px;
 top:200px;
 			relative => changes the position of the tag from the current position.
@@ -131,5 +140,23 @@ h2{
 If we want the text not to copy or select then we use:
 user-select:none;
 
+Style css should be added into the head tag and scripts tag should be added in the footer for the fast loading of website .
 
-
+<table>
+	<tr>
+		<th>
+			first
+		</th>
+		<th>
+			second
+		</th>
+	</tr>
+	<tr>
+		<td>
+			10
+		</td>
+		<td>
+			20
+		</td>
+	</tr>
+</table>

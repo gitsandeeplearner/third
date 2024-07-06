@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Common</title>
 	<style type="text/css">
-	p{
+	 p{
 			border: 2px solid red;
 			outline: 2px solid blue;
 			outline-offset: 3px; 	
@@ -13,10 +13,11 @@
 		}
 		.pad{
 			border: 2px solid blue;
-			padding: 10px;			padding works only with class and Id's
+			padding: 10px;			padding work only with class and Id's
 		}
 		.mar{
 			border: 2px solid green;
+			background-color: grey;
 			width: 80%;
 			margin: 10px auto;		// margin auto is used to make the div center and will only work with width 					property.
 		}
@@ -32,7 +33,7 @@
 			margin: 10px auto;
 			padding: 5px;
 		}
-		.miwid{
+		.maxwid{
 			border: 2px solid grey;
 			/*min-width: 200px;*/
 			max-width: 200px;
@@ -79,17 +80,25 @@
 		}
 		.outerbox{
 			width: 100%;
+			border: 1px solid red;
+			margin: 40px auto;
 		}
 		.innerfirst{
+			border: 1px solid yellow;
 			width: 50%;
+			box-sizing: border-box;
 			float: left;
 			padding: 10px 10%;
 		}
 		.innersecond{
 			width: 50%;
+			box-sizing: border-box;
 			height: 50px;
 			float: left;
 			background-color: lightgreen;
+		}
+		#niche{
+			clear: both;
 		}
 
 	</style>
@@ -102,14 +111,15 @@
 		<div class="mar">This div's width is 80% and margin auto and it is in another (Parent) div of width 50%.Margin is the gap between two div's. Margin auto is used to make the div center and it will only work with width property.</div>
 	</div>
 	
-	<div class="wid">Always try to give the width of the parent div in pecentage, so that it always remain responsive.</div>
+	<div class="wid">Always try to give the width of the parent div in pecentage, so that it always remain responsive.12<sup>th</sup>12<sub>th</sub></div>
 
 	<div class="hig">There is no need to give the height usually. We give it in the case when if needed and we will always try to use the min-height property, because with min-height the text will not overflow from the box or div.</div>
-	<div class="miwid">With img tag always use max-width and img 100%. With max-width, it will show the full image in the div and will not overflow. Also it will not crop the image. There is no need to give the width with img tag. Always use max-width with 100% img tag.
-		<img src="DSC02601.jpg">
+	<div class="maxwid">Give img tag width:100% and the div in which img is placed, give that div max-width:200/300/400px. With max-width, it will show the full image in the div and will not overflow. Also it will not crop the image. There is no need to give the width with img tag. Always use max-width with 100% img tag.
+		
+		<img src="assests/images/DSC02601.jpg">
 	</div>
 	<div class="boxsiz">
-		With box-sizing:border-box the width of the box will remain same instead of padding and border thickness.
+		With box-sizing:border-box the width of the box will remain same beside of padding and border thickness.
 	</div>
 
 	<div class="outerbox">
@@ -119,8 +129,10 @@
 				And to make the shape ofdffgdfgg dfgdf dfg dfg dfdf g eregtrew the circle, we use border-radius:50%.
 			</div>
 		</div>
-		<div class="innersecond"></div>
+		<div class="innersecond">This is the second inner div</div>
+
 	</div>
+	<div id="niche">here is something</div>
 
 
 </body>

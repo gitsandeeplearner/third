@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Form </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        form{
+	position: absolute;
+	left: 50%;
+	color: white;
+	margin-left: -180px;
+	padding: 15px 30px 15px 30px;
+	background-color: #26004d;
+	border-radius: 7px;
+	margin-top: 10px;
+	width: 300px;
+}
+
+label{
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+	width: 100px;
+}
+
+
+input[type="submit"]{
+ width: 50%;
+ background-color: #862d59;
+ color: white;
+ margin-top: 5px;
+ padding: 12px 12px;
+ border: none;
+ cursor: pointer;
+}
+
+input[type="text"]{
+	width: 100%;
+	padding:  12px 12px;
+	margin: 4px 0;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	box-sizing: border-box;
+
+}
+input[type="text"]:focus {
+	border: 5px solid red;
+}
+input[type="checkbox"]:checked{  /* checkbox/radio ke sath hamesha box-shadow kam karti hai*/
+    box-shadow: 0 0 0 3px red;}
+    </style>
+</head>
+<body>
+    <div id="formholder1">
+
+        <form>
+            <div class="single-field">
+            <label for="Username">Username:</label>
+                <input name="Name" type="text"></input>
+            </div>
+
+            <div class="single-field">
+                <label for="Password">Password:</label>
+                <input name="Password" type="text"></input>
+
+            </div>
+            <div class="single-field">
+                <input type="checkbox">Hindi
+                <input type="checkbox">English
+            </div>
+            <input type="submit" value="Login">
+        </form>	
+    </div>
+    
+</body>
+</html>

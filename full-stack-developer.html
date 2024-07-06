@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Developer</title>
+    <style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-weight: 300;
+            font-family: "Roboto", sans-serif;
+        }
+        h1{
+            color: white;
+            font-size: 72px;
+            font-weight: 400;
+        }
+        h2{
+            margin: 20px 0;
+        }
+        #section-1 span{
+            font-size: 25px;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        #section-2 h1 span {
+            font-weight: 400;
+            font-size: 96px;
+        }
+        #section-1 {
+            padding: 75px 0 0 240px;
+        }
+        #section-1{
+            height: 100vh;
+            background-image:url(assests/images/developer.png);
+            background-position: center;
+            background-size: cover;
+        }
+        #section-2{
+            background-color: black;
+            text-transform: uppercase;
+            padding: 30px;
+            text-align: center;
+        }
+
+        #section-2 h1{
+            font-size: 72px;
+            font-weight: 400;
+        }
+
+        #section-3{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 50px 0;
+        }
+        .work{
+            max-width: 320px;
+            background-color: white;
+            min-height: 30vh;
+            border-radius: 10px;
+            /* box-shadow: 10px 10px 0 ; */
+            
+            box-shadow: 3px 5px 1px rgba(1, 1, 1, 0.2);
+            transition: 0.2s ease-in-out;
+        }
+        .work:hover{
+            box-shadow: 3px 5px 5px rgba(1, 1, 1, 0.3);
+            transition: 0.2s ease-in-out;
+        }
+        .work-text{
+            padding: 15px;
+        }
+        .work p{
+            line-height: 20px;
+        }
+        #contact-about{
+            display: flex;
+        }
+        .contact{
+            background-color: #515603;
+        }
+        .about{
+            background-color: #722300;
+        }
+        .contact,
+        .about{
+            min-height: 48vh;
+            color: white;
+            padding: 25px;
+            
+        }
+        .contact p,
+        .about p{
+            margin-bottom: 10px;
+        }
+        .about h1,
+        .contact h1 {
+        font-size: 64px;
+        font-weight: 300;
+        }
+        #footer{
+            background-color: black;
+            color: white;
+            padding: 3px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 100;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section id="section-1">
+        <div>
+        <h1>Hi,<span>I am john Deo</span></h1> 
+        </div>
+        <div>
+            <h1>FULL STACK DEVELOPER</h1>
+        </div>
+    </section>
+    <section id="section-2">
+        <h1>work, I can do for <span> you</span></h1>
+    </section>
+    <section id="section-3">
+        <div class="work">
+            <div>
+                <img src="assests/images/web.png" alt="web development">
+            </div>
+            <div class="work-text">
+            <h2>Web Development</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum autem minus qui veniam commodi eligendi repellat totam voluptatem facilis dignissimos.</p>
+            </div>
+        </div>
+        <div class="work">
+            <div>
+                <img src="assests/images/mobile.png" alt="app development">
+            </div>
+            <div class="work-text">
+            <h2>App Development</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum autem minus qui veniam commodi eligendi repellat totam voluptatem facilis dignissimos.</p>
+            </div>
+        </div>
+        <div class="work">
+            <div>
+                <img src="assests/images/uiux.png" alt="ui-ux design">
+            </div>
+            <div class="work-text">
+            <h2>UX/UI Design</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum autem minus qui veniam commodi eligendi repellat totam voluptatem facilis dignissimos.</p>
+        </div>
+        </div>
+    </section>
+    <section id="contact-about">
+        <div class="contact">
+            <h1>Contact Me</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis, ut a, quod cumque voluptatibus laudantium vero ratione amet unde aspernatur minima porro quos error ipsum ullam ducimus inventore laboriosam?</p>
+            <p>practise@example.test</p>
+        </div>
+        <div class="about">
+            <h1>About Me</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum officia ratione autem deserunt odio quos explicabo vel consectetur dicta! Ea, maxime itaque magnam libero nobis dicta iusto deserunt ducimus natus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quae dolor ipsam ab quod saepe ut ad nihil numquam voluptatum</p>
+        </div>
+        
+    </section>
+    <section id="footer">
+        <h2>Project by sandeep kumar</h2>
+    </section>
+    
+</body>
+</html>

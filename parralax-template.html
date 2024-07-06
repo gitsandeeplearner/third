@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax template</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #666;
+    }
+    h1{
+        color: white;
+        font-size: 40px;
+        background: #313534;
+        padding: 20px;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        
+    }
+    .section-1{
+        background-image: url(assests/images/image1.png);
+        min-height: 100%;
+    }
+    .section-2{
+        background-image: url(assests/images/image2.png);
+        
+    }
+    .section-3{
+        background-image: url(assests/images/image3.png);
+        
+    }
+    .section-images{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .text{
+        width: 100vw;
+        height: 100vh;
+        display: flex; /* Important:== flex ke sath height aur width doge tabi align-items:center property chalegi*/
+        justify-content: center;
+        align-items: center;
+    }
+    .content h2{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .content{
+        background-color: #f4f4f4;
+        color: #666;
+        min-height: 40vh;
+        padding: 50px;
+        line-height: 25px;
+    }
+    .content-two{
+        background-color: aliceblue;
+        
+    }
+    .content-three{
+        background-color: #282e34;
+        color: #ddd;
+        
+    }
+
+</style>
+<body>
+    <section  class="section-1 section-images">
+        <div class="text" >
+            <h1>Parallax Website</h1>
+        </div>
+           
+    </section>
+    <section>
+        <div class="content">
+            <h2>Section One</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis autem nesciunt ducimus, magnam labore repudiandae culpa, laudantium dolorem atque aperiam dolore adipisci voluptatibus delectus. Sunt, amet. Maiores suscipit maxime veritatis!</p>
+        </div>
+    </section>
+    <section  class="section-2 section-images">
+        <div class="text" >
+            <h1>Explore Nature</h1>
+        </div>   
+    </section>
+    <section>
+        <div class="content content-two">
+            <h2>Section Two</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis autem nesciunt ducimus, magnam labore repudiandae culpa, laudantium dolorem atque aperiam dolore adipisci voluptatibus delectus. Sunt, amet. Maiores suscipit maxime veritatis!</p>
+        </div>
+    </section>
+    <section  class="section-3 section-images">
+        <div class="text" >
+            <h1>Look, Deep Into Nature</h1>
+        </div>   
+    </section>
+    <section>
+        <div class="content content-three">
+            <h2>Section Three</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis autem nesciunt ducimus, magnam labore repudiandae culpa, laudantium dolorem atque aperiam dolore adipisci voluptatibus delectus. Sunt, amet. Maiores suscipit maxime veritatis!</p>
+        </div>
+    </section>
+    <section  class="section-1 section-images">
+        <div class="text" >
+            <h1>Do some coding</h1>
+        </div>
+           
+    </section>
+    
+</body>
+</html>

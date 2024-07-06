@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo - Selectors</title>
+    <style>
+        
+        .inner{
+            border: 1px solid red;
+            padding: 10px;
+        }
+        p{
+            color: green;
+        }
+        div p{
+            color: blue;
+        }
+        span{
+            color: aqua;
+        }
+        p span{
+            color:  brown;
+        }
+        
+        #list li:first-child{
+            color: mediumspringgreen;
+        }
+        ul li{
+            color: chartreuse;
+        }
+        #list > li{  /* Jis tag ke child ko special effects/properties deni hai use specially mention karna padega, nahi to effects show nahi karega */
+            color: blueviolet;
+        }
+        
+        .pseudo-n p:nth-child(2n){ /*yah hamesha tag ke sath ho kam karega*/
+            color:indianred;
+
+        }
+        input:focus{
+            border: 5px solid red;
+        }
+        input[type="checkbox"]:checked{
+            box-shadow: 0 0 0 5px orange;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Psuedo and Selectors</h1>
+    <ul id="list">
+        <li>Home</li>
+        <li>Contact us</li>
+        <li>Services
+            <ul>
+                <li>Home Delivery</li>
+                <li>Self Service</li>
+            </ul>
+        </li>
+        <li>About us</li>
+        <li>Career</li>
+    </ul>
+    
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel itaque incidunt magni qui autem recusandae, asperiores distinctio reiciendis repellat nam tempore dignissimos, beatae aperiam vitae placeat nulla atque commodi dolores labore excepturi natus? Perspiciatis atque voluptatem odio illo quam, aperiam beatae magnam labore iure minima ratione ipsum officia vel. </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, quo, sint culpa laboriosam sequi quas optio enim placeat, porro odio reiciendis accusamus quos hic ullam sapiente? Inventore ipsum excepturi ducimus autem necessitatibus provident nulla quis repellendus iure voluptatibus eos impedit suscipit, maiores dicta nihil, libero corrupti hic esse consequatur eum.</p>
+    <div class="inner">
+        <span>Home</span>
+        <p>Lorem ipsum dolor <span> amet consectetur </span>adipisicing elit. Temporibus non perferendis accusantium totam ipsam porro iste sint? accusamus debitis fuga, dolore ad omnis optio repellendus! Ipsam maiores error ex, corporis earum dolor voluptates atque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, quam! Eum suscipit error libero maiores, quae, veritatis voluptatibus esse dolore facere at id a nam, itaque voluptas iure ducimus ipsa.</p>
+    </div>
+    <div class="for">
+        <form action="#">
+        <input type="text">First Name
+        <input type="text">Last name
+        <input type="checkbox" name="gender">Male
+    </form>
+    </div>
+    <div class="pseudo-n">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quae, ex illo quos porro quam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quae, ex illo quos porro quam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quae, ex illo quos porro quam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quae, ex illo quos porro quam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quae, ex illo quos porro quam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quae, ex illo quos porro quam.</p>
+
+    </div>
+</body>
+</html>

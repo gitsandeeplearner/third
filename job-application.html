@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job-Application</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            /* height: 100vh; */
+        }
+        body{
+            background-color: #ccc;
+        }
+        .wrapper{
+            max-width: 45vw;
+            padding: 20px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 10px;
+            box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+            border-radius: 10px;
+
+        }
+        .comm-outer-flex{
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .comm-inner-flex{
+            display: flex;
+            flex-direction: column;
+        }
+        .comm-mar{
+            margin: 15px 0;
+        }
+        .comm-padd{
+            padding: 5px 0;
+        }
+        input,#jrole{
+            width: 20vw;
+            height: 5vh;
+        }
+        input[type="text"]:focus{
+            border:5px solid blue;
+        }
+        #apply{
+            /* margin-top: 50px; */
+            text-align: right;
+        }
+        #apply-btn{
+            background-color: red;
+            color: #fff;
+            padding: 10px;
+            width: 12vw;
+            transition: 0.3s ease-in;
+        }
+        #apply-btn:hover{
+            background-color: #ccc;
+            color: black;
+            transition: 0.3s ease-out;
+            cursor: pointer;
+            
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div id="job-form">
+                <h1>Job Application</h1>
+                <form action="#">
+                    <div id="names" class="comm-outer-flex comm-mar">
+                        <div id="fname" class="comm-inner-flex">
+                            <label for="fname" class="comm-padd">First Name</label>
+                            <input type="text" name="fname">
+                        </div>
+                        <div id="lname" class="comm-inner-flex" >
+                            <label for="lname" class="comm-padd">Last Name</label>
+                            <input type="text" name="fname">
+                        </div>
+                    </div>
+                    <div id="email-role" class="comm-outer-flex comm-mar">
+                        <div id="email" class="comm-inner-flex">
+                            <label for="email" class="comm-padd">Email</label>
+                            <input type="text" name="email">
+                        </div>
+                        <div id="role" class="comm-inner-flex">
+                            <label for="role" class="comm-padd">Role`</label>
+                            <select name="role" id="jrole">
+                                <option value="sjr">Select Job Role</option>
+                                <option value="jd">Junior developer</option>
+                                <option value="sd">Senior developer</option>
+                                <option value="des">Designer</option>
+                                <option value="m">Manager</option>
+                                <option value="sm">Senior Manager</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="address" class="comm-mar">
+                        <div id="address" class="comm-inner-flex">
+                            <label for="fname" class="comm-padd">Address</label>
+                            <textarea name="address" id="" cols="30" rows="3    "></textarea>
+                        </div>
+                        
+                    </div>
+                    <div id="city-pin" class="comm-outer-flex comm-mar">
+                        <div id="city" class="comm-inner-flex">
+                            <label for="city" class="comm-padd">City</label>
+                            <input type="text" name="city">
+                        </div>
+                        <div id="pin" class="comm-inner-flex">
+                            <label for="pin" class="comm-padd">Pin Code</label>
+                            <input type="number" name="pin">
+                        </div>
+                    </div>
+                    <div id="date-up" class="comm-outer-flex comm-mar">
+                        <div id="date" class="comm-inner-flex">
+                            <label for="date" class="comm-padd">Start Date</label>
+                            <input type="date" name="date" value="current">
+                        </div>
+                        <div id="upload-cv" class="comm-inner-flex">
+                            <label for="upload" class="comm-padd">Upload</label>
+                            <input type="file" id="upload" name="upload">
+                        </div>
+                    </div>
+                    <div id="apply"> 
+                        <button id="apply-btn" type="submit">Apply Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

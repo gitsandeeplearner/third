@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Layout</title>
+    <style>
+        *{   /* This is the most important to declare in every css*/ 
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        :root{
+            --main-color:burlywood;
+            --p-font:verdana;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #wrapper{
+            border: 1px solid black;
+        }
+        .header{
+            background-color:var(--main-color);
+            height: 100px;
+            padding: 20px;
+        }
+        .footer{
+            background-color:var(--main-color);
+            padding: 10px;
+            text-align: right;
+        }
+        .nav{
+            background-color:hotpink;
+            padding: 10px;
+        }
+        .nav a{
+            color: #000;
+            text-decoration: none;
+            margin: 5px;
+        }
+        .art{
+            padding: 15px;
+            width: 60%;
+            float: left;
+        }
+        .art p{
+            font-family: var(--p-font);
+        }
+        .aside{
+            background-color: cornflowerblue;
+            padding: 20px;
+            width: 40%;
+            float: left;
+            min-height: 400px;
+        }
+        ul{
+            list-style-type: circle;
+            list-style-position:inside;
+            text-align: center;
+        }
+        li{
+            margin: 15px;
+            /* text-align: center; */
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="header">
+            <h1>Website Name</h1>
+        </div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact Us</a>
+            
+        </div>
+        <div class="art">
+            <h2>Sub Heading</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero saepe perferendis incidunt ipsam quis ducimus laboriosam inventore voluptatibus eum perspiciatis aspernatur id eius, odio, nisi et, magni est? Delectus, atque.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero saepe perferendis incidunt ipsam quis ducimus laboriosam inventore voluptatibus eum perspiciatis aspernatur id eius, odio, nisi et, magni est? Delectus, atque.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero saepe perferendis incidunt ipsam quis ducimus laboriosam inventore voluptatibus eum perspiciatis aspernatur id eius, odio, nisi et, magni est? Delectus, atque.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero saepe perferendis incidunt ipsam quis ducimus laboriosam inventore voluptatibus eum perspiciatis aspernatur id eius, odio, nisi et, magni est? Delectus, atque.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero saepe perferendis incidunt ipsam quis ducimus laboriosam inventore voluptatibus eum perspiciatis aspernatur id eius, odio, nisi et, magni est? Delectus, atque.</p>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero saepe perferendis incidunt ipsam quis ducimus laboriosam inventore voluptatibus eum perspiciatis aspernatur id eius, odio, nisi et, magni est? Delectus, atque.Lorem ipsum dolor sit.
+            </p>
+        </div>
+        <div class="aside">
+            <ul >
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Gallery</li>
+                <li>Contact Us</li>
+                <li>Services</li>
+            </ul>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="footer">
+            Websitename@gmail.com
+        </div>
+    </div>
+</body>
+</html>

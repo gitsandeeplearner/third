@@ -1,0 +1,88 @@
+*{
+
+}
+::selection{
+	color:red;
+	background-color:yellow;
+}
+h1.c1{
+		color:yellow; /* Here c1 class is particular for h1 tag */
+		border: 1px solid darkred;
+		margin: 10px 0;
+	}
+	.c1{
+		color: hotpink;
+	}
+	.t1{
+		border:1px solid black;
+		border-radius: 3px;
+		width: 80%;
+		margin: auto;
+	}
+	.commondiv{
+		float: left;
+		margin: 0px 3px;
+		padding: 5px 5px;
+	}
+	#first{
+		border: 1px solid red;
+		width: 400px;
+
+	}
+	#second{
+		border: 1px solid green;
+		width: 300px;
+	}
+	#third{
+		border: 1px solid blue;
+		width: 150px;
+		
+	}
+	#fourth{
+		width: 200px;
+		padding: 10px;
+		border:1px solid green;
+		background-color: grey;
+		/* clear: both;  */
+		/* margin-top: 12px; */
+		/*clear:both lagane se yeh margin-top nahi leta, So clear:both ek alag div mein lagega Ya fir PARENT div ko overflow:hidden do. Kyuki jis div ki height zayada hai margin-top mein wo us div ki height bi add karta hai.  ;*/
+	}
+	
+	img{
+		width: 20%;
+		height: 200px;
+		object-fit: contain;
+	}
+	.spdi1{
+		border: 1px solid red;
+		/* clear: both; */
+		display: inline-block;
+	}
+	.spdi2{
+		border: 1px solid green;
+		/*clear: both;*/
+		display: inline-block;
+		padding: 30px;
+		margin-top: 10px;
+	}
+	#loremcol{
+		margin-top:15px ;
+		text-align: justify;
+		column-width:350px;
+		column-rule: 2px solid red;
+		column-gap: 30px;
+		/*column-rule: width style color;*/
+		user-select: none;
+	}
+	#div1{
+	background-color: red;
+	width: 200px;
+	height: 100px;
+	display: inline;
+}
+#div2{
+	background-color: orange;
+	width: 200px;
+	height: 100px;
+	display: inline;
+}

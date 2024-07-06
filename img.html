@@ -1,0 +1,40 @@
+<!-- 
+Old tareeka - Is tareeke se small images stretch ho jati hai jab unko height di jati hai.
+img{
+    width:100%;
+    object-fit:cover; nava tarekka, image crop jarur hogi per stretch nahi hogi.
+            :contain; is se height width puri ho jayegi aur image apni actuall size mein a jayegi.
+}
+
+div{
+    width:150px;
+}
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resposiveness</title>
+    <style>
+        #box{
+            border: 1px solid red;
+            height: 400px;
+            max-width: 40%;
+            background-color: pink;
+        }
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+    </style>
+ </head>
+ <body>
+    <div id="box">
+        <img src="assests/images/DSC02647.JPG" alt="ashrit">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus officia doloribus porro pariatur voluptatem modi cumque nam omnis corporis. Totam id ipsa saepe quas, ullam deleniti illo vitae. Praesentium, incidunt.</p>
+    </div>
+ </body>
+ </html>

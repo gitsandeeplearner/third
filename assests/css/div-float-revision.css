@@ -1,0 +1,55 @@
+*{
+
+}
+	.commondiv{
+		float: left;
+		margin: 12px 3px;
+		padding: 5px 5px;
+	}
+	#first{
+		border: 1px solid red;
+		width: 400px;
+
+	}
+	#second{
+		border: 1px solid green;
+		width: 300px;
+	}
+	#third{
+		border: 1px solid blue;
+		width: 150px;
+
+	}
+	#fourth{
+		width: 80%;
+		clear: both; 
+		/*is div ko clear:both lagane se yeh margin-top nahi leta,So clear:both ek alag new div mein lagega;*/
+		border:1px solid green;
+		padding: 10px;
+		margin-bottom: 35px;
+	}
+
+	.main-text{
+		background-color: aqua;
+		width:90%;
+		/* margin:auto; */
+	}
+	#text-overlfow-clip{
+		border: 1px solid red;
+		width:200px;
+		/* float:left; */
+
+	}
+	#text-overlfow-ecllipse{
+		border: 1px solid salmon;
+		width: 300px;
+		float:left;
+
+	}
+	#text-overlfow-string{
+		border: 1px solid seagreen;
+		width: 300px;
+		float: left;
+
+	}
+	

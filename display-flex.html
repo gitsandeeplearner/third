@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Display Flex</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		.container{
+			border: 2px solid grey;
+			width: 80%;
+			margin: 20px auto 15px; /*  */
+			display: flex; /* jab hum flex property lagate hain to internal div's apne content ke hisab se main div ki width ko barabar divide kar lete hain, Agar hum internal div's ko width dete hain to internal div's width ke according kam karte hain aur by default internal div's align left rehete hain. */
+			/* justify-content: space-around; */
+		}
+		.com{
+			margin: 5px;
+			border: 2px solid cyan;
+			padding: 10px;
+			
+		}
+		.left{
+			width: 35%;
+				
+		}
+		.right{
+			width: 35%;
+		}
+		.img-text{
+			border:1px solid blue;
+			padding: 5px;
+			margin: 5px 0;
+			height: 150px;
+		}
+		img{
+			width:200px;
+			float:left;
+			margin-right: 15px;
+			opacity: .2;
+		}
+		img:hover{
+			opacity: 1;
+		}
+		.div1{
+			border: 1px solid red;
+			background-color: tomato;
+		}
+		.div2{
+			border: 1px solid blue;
+			background-color: green;
+		}
+		.div3{
+			border: 1px solid blue;
+			background-color: green;
+		}
+		.div-flex-grow{
+			border: 1px solid blue;
+			background-color: green;
+			flex-grow: 1;
+		}
+		.div4{
+			border: 1px solid blue;
+			background-color: violet;
+		}
+		.div5{
+			border: 1px solid blue;
+			background-color: maroon;
+		}
+		.div6{
+			border: 1px solid blue;
+			background-color: mediumorchid;
+		}
+		.div7{
+			border: 1px solid blue;
+			background-color: magenta;
+		}
+		
+		.col{
+			margin-top: 10px;
+			border: 1px solid grey;
+			padding: 10px;
+			width: 1050px;
+			display: flex;
+			/* justify-content: center; */
+			justify-content: space-evenly;
+			/* flex-direction: column-reverse; */
+			/* flex-wrap: wrap; */
+		}
+		.col2{
+			margin-top: 10px;
+			border: 1px solid grey;
+			padding: 10px;
+			width: 1050px;
+			display: flex;
+			justify-content: flex-end;
+			
+		}
+		.col3{
+			margin-top: 10px;
+			border: 1px solid grey;
+			padding: 10px;
+			width: 1050px;
+			height: 120px;
+			display: flex;
+			/* justify-content: center; */
+			justify-content: flex-end;
+			align-items: flex-end;
+			
+		}
+		.col4{
+			margin-top: 10px;
+			border: 1px solid grey;
+			padding: 10px;
+			width: 1050px;
+			height: 100px;
+			display: flex;
+			align-items: flex-end;  /*Yeh hamesh y-axis per kam karti hai means vertically align karne ke liye*/
+			
+		}
+		.col5{
+			margin-top: 10px;
+			border: 1px solid grey;
+			padding: 10px;
+			width: 1050px;
+			height: 100px;
+			display: flex;
+			align-items: flex-end;  /*Yeh hamesha y-axis per kam karti hai means vertically align karne ke liye*/
+			
+		}
+		.col-common{
+			padding: 10px;
+			margin: 5px;
+			color: aliceblue;
+			text-align: center;
+
+		}
+		.col-common4{
+			padding: 10px;
+			margin: 5px;
+			text-align: center;
+			color: aliceblue;
+			flex-grow: 2;  /* flex-grow property container ke internal div's ki width badane ke liye hoti hai aur yeh container per nahi lagti, Yeh container ke ander common class per lagti hai jis se sare internal div's ki width same ho jati hai. Aagar hame kisi indiviual internal div ki width badani hai to hum is us specific div per flex-grow: value; lagayange.   */
+
+		}
+		
+		</style>
+</head>
+<body>
+
+<div class="container">	
+	<div class="left com">
+		This is the left side div.This is the left side div.This is the left side div.This is the left side div.This is the left side div.This is the left side div.This is the left side div.This is the left side div.
+	</div>
+	<div class="right com">
+		This is the right side div.This is the right side div.This is the right side div.This is the right side div.This is the right side div.This is the right side div.This is the right side div.This is the right side div.
+	</div>
+	
+</div>
+<div class="img-text">
+	<img src="assests/images/img_5terre.jpg">
+	This image is with opacity .2 which is minimum.
+</div>
+<div class="col">
+	<div class="col-common div1">This is the first div</div>
+	<div class="col-common div2">This is the second div</div>
+	<div class="col-common div3">This is the third div</div>
+	<!-- <div class="col-common div4">This is the fourth div</div>
+	<div class="col-common div5">This is the fifth div</div>
+	<div class="col-common div6">This is the sixth div</div>
+	<div class="col-common div6">This is the seventh div</div> -->
+</div>
+<div class="col2">
+	<div class="col-common div1">This is the first2 div</div>
+	<div class="col-common div2">This is the second2 div</div>
+	<div class="col-common div3">This is the third2 div</div>
+</div>
+<div class="col3">
+	<div class="col-common div1">This is the first3 div</div>
+	<div class="col-common div2">This is the second3 div</div>
+	<div class="col-common div3">This is the third3 div</div>
+</div>
+<div class="col4">
+	<div class="col-common4 div1">This is the first4 div</div>
+	<div class="col-common4 div2">This is the second4 div</div>
+	<div class="col-common4 div3">This is the third4 div</div>
+</div>
+<div class="col5">
+	<div class="col-common div1">This is the first5 div</div>
+	<div class="col-common div-flex-grow">This is the second5 div</div>
+	<div class="col-common div-flex-grow">This is the third5 div</div>
+</div>
+</body>
+</html>

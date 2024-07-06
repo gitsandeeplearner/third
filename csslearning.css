@@ -1,6 +1,14 @@
+/* This is good practise to set these from the start of any css. This will remove all the extra spaces from padding and margin */
+*{
+	padding: 0;
+	margin:0;
+	box-sizing:border-box;
+}
 body{
-	background: lightblue url("img_tree.png") no-repeat top right  ;
+	background: lightblue url("assests/images/img_tree.png") no-repeat top right;
 	font-size:100%;/*The solution that works in all browsers, is to set a default font-size in percent for the <body> element:*/
+	background-attachment: scroll;
+	top: 40px;
 }
 /*body{
 	background-image:url("DSC02647.jpg");
@@ -31,7 +39,7 @@ withext{
 	display:block; /* override container ko niche le ata hai*/
 	margin: 20px;
 	background-color:yellow;
-	padding:30px;
+	padding:10px;
 	width:300px;
 	text-align:justify;
 	text-indent:70px; /*Will give the space on the first line*/
@@ -43,6 +51,16 @@ withext{
 	font-family:sans-serif, Arial;
 	/* For icon we will use bootstrap, font awesome and google icon css*/
 
+}
+.a{
+	background-color: red;
+	/*padding:20px;*/
+	/*display: inline-block;*/
+}
+.b{
+	background-color: red;
+	padding:20px;
+	display: block;
 }
 
 #textdec{
@@ -90,20 +108,11 @@ justfor{
 	margin:10px;
 }
 
-.a{
-	background-color: red;
-	/*padding:20px;*/
-	/*display: inline-block;*/
-}
-.b{
-	background-color: red;
-	padding:20px;
-	display: block;
-}
+
 .first_para{
-	display:block;
+	/*display:block;*/
 	max-width: 800px;
-	/*margin: auto;*/
+	margin: auto;
 }
 /* Links
 There are four state of the links which must follow the following order
@@ -145,15 +154,12 @@ and for hover tr:hover{background-color:#000000;}
 Every element has "position" value which we will use with top, left, bottom and right property.
 By default every element have static position. It has no top, bottom, left, right property.
 
-Margin-top is the margin between two elements. But position:absolute ; top:80px; is from the top of the screen
+position:absolute ; top:80px; is from the top of the screen
 and in position:relative; top:80px; is the position with respect to its actual position.
 
 Position relative is compared to the normal/actual position of the element.And we can move that element
 with the top, left, bottom and right property from its original position. Suppose we are not using 
 these property with the relative position then it will behave same as the normal position.
-
-position:fixed; fixed the element and it will move up and down on scrolling the page.
-We need to declare the property where to show the element by giving 0px to the property.
 
 By position:absolute; we can move an element anywhere and its postion will be with respect to its property
 (top,right, bottom,left). It works on the behalf of the property given. And if it is in the another element 
@@ -161,18 +167,37 @@ then it will take the properties according to that element.
 We can remove the problem of overlapping of two elements with the help of absolute position.
 With the help of z-index we are remove overlapping. If z-index:-1; it will be shown behind the others. 
 
+position:fixed; fixed the element and it will move up and down on scrolling the page.
+We need to declare the property where to show the element by giving 0px to the property.
+
 Position:sticky; means the element is stuck and will move down while scrolling. Best exapmle are the menus.
 And for Safari it is declared with webkit like position: -webkit-sticky;
 
 
 */
+
+
+img{
+	width: 100%;
+	height: 350px;
+	object-fit: contain;
+}
 .container{
 	position:relative;
+	max-width: 30%;
+	height: 350px;
+	margin: 10px 0;
 }
 .imgtext{
 	position:absolute;
 	top:30px;
 	left:20px;
+}
+.op{
+	opacity:0.2;
+}
+.op:hover{
+	opacity:1;
 }
 /*
 Overflow attribute is used to control the text of an block element. 
@@ -225,10 +250,3 @@ opacity means transparency of the image. By default it is 1 which means clear im
 0.5 has more clearance than 0.2 
 */
 
-.op{
-	opacity:0.2;
-
-}
-.op:hover{
-	opacity:1;
-}

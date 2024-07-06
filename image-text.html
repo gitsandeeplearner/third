@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<head> 
+<title>Image - Text</title> 
+<style> 
+*{   /* This is the most important to declare in every css*/ 
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ .container{
+    border: 1px solid red;
+    padding: 10px;
+    width: 600px;
+    margin: 50px auto;
+    display: flex; /* hum display:flex bi de sakte hain aur hum image tag ko float:left bi de sakte hain, both will align the text and image*/
+
+    /* height: 300px; */
+    /* background-image: url(assests/images/img_mountains.jpg); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    
+ }
+ img{
+  border: 1px solid blue;
+  width: 200px;
+  margin:0 10px 0 0px;
+ }
+
+</style> 
+</head> 
+<body>
+  <div class="container">
+    <img src="assests/images/img_mountains.jpg" alt="mountains">
+    <div class="bottom-text">
+      <h1>Align image and text using HTML and CSS</h1>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas molestiae deleniti est, expedita dignissimos voluptatem! Reiciendis, et cupiditate? Quo nulla rem accusamus in reprehenderit aut reiciendis maxime omnis laudantium voluptates!</p>
+    </div>
+  </div>
+</body> 
+</html> 

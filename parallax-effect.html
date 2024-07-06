@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            font-size: 65px;
+        }
+        p{
+            font-size: 40px;
+        }
+        h1,p{
+            color: aliceblue;
+        }
+        .common-properties{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; /* Important:== flex ke sath height aur width doge tabi align-items:center property chalegi*/
+            background-repeat: no-repeat;
+            background-size: 100% 100vh;
+            background-attachment: fixed;
+        }
+        .section-1{
+            background-image: url(assests/images/silence.jpg);
+        }
+        .section-2{
+            background-image: url(assests/images/spend.jpg);
+        }
+        .section-3{
+            background-image: url(assests/images/feelings.jpg);
+        }
+        .section-4{
+            background-image: url(assests/images/nature.jpg);
+        }
+        .section-5{
+            background-image: url(assests/images/hope.jpg);
+        }
+    </style>
+</head>
+<body>
+    <section class="section-1 common-properties">
+        <h1>Silence</h1>
+        <p>Silence is the best medicine</p>
+    </section>
+    <section class="section-2 common-properties">
+        <h1>Meet yourself</h1>
+        <p>Spend Time with yourself</p>
+    </section>
+    <section class="section-3 common-properties">
+        <h1>Feelings</h1>
+        <p>Share your feelings</p>
+    </section>
+    <section class="section-4 common-properties">
+        <h1>Nature</h1>
+        <p>Nature is always with you</p>
+    </section>
+    <section class="section-5 common-properties">
+        <h1>Hope</h1>
+        <p>New day, new hope</p>
+    </section>
+</body>
+</html>
